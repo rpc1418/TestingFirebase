@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		248675962F3664450058BFCB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 248675952F3664450058BFCB /* FirebaseAuth */; };
+		248675982F3664450058BFCB /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 248675972F3664450058BFCB /* FirebaseAuthCombine-Community */; };
+		2486759A2F3664450058BFCB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 248675992F3664450058BFCB /* FirebaseDatabase */; };
+		2486759C2F3664450058BFCB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2486759B2F3664450058BFCB /* FirebaseFirestore */; };
+		2486759E2F3664450058BFCB /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 2486759D2F3664450058BFCB /* FirebaseFirestoreCombine-Community */; };
+		248675A02F3664450058BFCB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2486759F2F3664450058BFCB /* FirebaseStorage */; };
+		248675B62F3697310058BFCB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 248675B52F3697310058BFCB /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		248675862F3663CC0058BFCB /* FirebaseAuthPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		248675B52F3697310058BFCB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +34,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2486759A2F3664450058BFCB /* FirebaseDatabase in Frameworks */,
+				2486759C2F3664450058BFCB /* FirebaseFirestore in Frameworks */,
+				248675962F3664450058BFCB /* FirebaseAuth in Frameworks */,
+				2486759E2F3664450058BFCB /* FirebaseFirestoreCombine-Community in Frameworks */,
+				248675982F3664450058BFCB /* FirebaseAuthCombine-Community in Frameworks */,
+				248675A02F3664450058BFCB /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +49,9 @@
 		2486757D2F3663CC0058BFCB = {
 			isa = PBXGroup;
 			children = (
+				248675B52F3697310058BFCB /* .gitignore */,
 				248675882F3663CC0058BFCB /* FirebaseAuthPrac */,
+				248675A12F3664820058BFCB /* Frameworks */,
 				248675872F3663CC0058BFCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +62,13 @@
 				248675862F3663CC0058BFCB /* FirebaseAuthPrac.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		248675A12F3664820058BFCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +91,12 @@
 			);
 			name = FirebaseAuthPrac;
 			packageProductDependencies = (
+				248675952F3664450058BFCB /* FirebaseAuth */,
+				248675972F3664450058BFCB /* FirebaseAuthCombine-Community */,
+				248675992F3664450058BFCB /* FirebaseDatabase */,
+				2486759B2F3664450058BFCB /* FirebaseFirestore */,
+				2486759D2F3664450058BFCB /* FirebaseFirestoreCombine-Community */,
+				2486759F2F3664450058BFCB /* FirebaseStorage */,
 			);
 			productName = FirebaseAuthPrac;
 			productReference = 248675862F3663CC0058BFCB /* FirebaseAuthPrac.app */;
@@ -94,6 +126,9 @@
 			);
 			mainGroup = 2486757D2F3663CC0058BFCB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 248675872F3663CC0058BFCB /* Products */;
 			projectDirPath = "";
@@ -109,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248675B62F3697310058BFCB /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +364,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		248675952F3664450058BFCB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		248675972F3664450058BFCB /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		248675992F3664450058BFCB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		2486759B2F3664450058BFCB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2486759D2F3664450058BFCB /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		2486759F2F3664450058BFCB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 248675942F3664450058BFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2486757E2F3663CC0058BFCB /* Project object */;
 }

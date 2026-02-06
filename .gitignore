@@ -1,0 +1,22 @@
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+xcuserdata/
+
+# Swift Packages
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Firebase
+GoogleService-Info.plist
+
+# Logs and system files
+*.log
+*.DS_Store
+
+# User-specific
+*.swp
