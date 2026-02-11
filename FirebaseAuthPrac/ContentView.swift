@@ -18,26 +18,13 @@ struct ContentView: View {
             if authSession.isLoading {
                             Text("Loading...")
                         } else if authSession.user != nil {
-                            Text("Hello, \(authSession.user!.email!)")
-                            Button("logout"){
-                                Task{
-                                    try authService.logout()
-                                }
-                            }
+                            ChatView()
                         } else {
                             AuthView()
                         }
         }
         .onAppear {
-            let authService = AuthService()
-            authService.fetchUser(byPhone: "1") { user in
-                if let user = user {
-                    print("User found:", user.name, user.email)
-                    print(user)
-                } else {
-                    print("User not found")
-                }
-            }
+            
 
         }
         .padding()

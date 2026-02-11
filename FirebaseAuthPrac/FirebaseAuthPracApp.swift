@@ -14,7 +14,10 @@ struct FirebaseAuthPracApp: App {
     @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(authSession)
+            NavigationStack{
+                ContentView().environmentObject(authSession)
+            }
+            
         }
         .onChange(of: scenePhase) { phase in
             switch phase {

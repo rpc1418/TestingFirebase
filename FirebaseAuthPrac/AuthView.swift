@@ -10,6 +10,7 @@ import SwiftUI
 struct AuthView: View {
     @State var num: String = ""
     @State var pass: String = ""
+    @State var msg: String = ""
     let authSErvice: AuthService = AuthService()
     var body: some View {
         Spacer()
@@ -18,7 +19,7 @@ struct AuthView: View {
         SecureField("Password", text: $pass)
         Button("Login") {
             Task{
-                try await authSErvice.login(phone: num, password: pass)
+                msg = try await authSErvice.login(phone: num, password: pass)
             }
             
         }
@@ -28,9 +29,11 @@ struct AuthView: View {
         SecureField("Password", text: $pass)
         Button("Signup") {
             Task{
-                try await authSErvice.signup(phone: num, password: pass)
+                msg = try await authSErvice.signup(phone: num, password: pass)
             }
         }
+        Spacer()
+        Text(msg)
         Spacer()
     }
 }
